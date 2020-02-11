@@ -1,0 +1,246 @@
+:root {
+  --bg-primary-water: #fef7f6;
+  --bg-primary-section: #eae2d8;
+  --theme-color: #ff5353;
+  --theme-blue: rgb(4, 2, 131);
+  --grey-border: #ebeef0;
+}
+
+*,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+#top-header {
+  background-color: var(--bg-primary-water);
+  padding: 1.5rem;
+}
+
+small {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: var(--theme-color);
+}
+
+section {
+  margin-top: 5rem;
+}
+
+/* Generics */
+.button {
+  border: none;
+  outline: 0;
+  padding: 1.5rem 3.5rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  background: #000;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.button:hover {
+  box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.05);
+}
+
+.button.theme-primary {
+  color: #fff;
+  background: var(--theme-color);
+}
+.button.theme-primary:hover {
+  color: var(--theme-blue);
+  background: #fff;
+  transition: 0.3s all ease-in;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 3.5rem;
+  margin-bottom: 8rem;
+  text-transform: uppercase;
+}
+
+/* Top nav */
+#top-header .top-header--box small:not(:last-child) {
+  padding-right: 1.5rem;
+}
+
+/* navbar */
+.navbar-nav * {
+  padding: 1.2rem 0;
+}
+
+.navbar-nav .nav-item:not(:last-child) {
+  margin-right: 2rem;
+}
+.navbar-nav > a:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.nav-item a,
+i {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.navbar-nav a:hover,
+.navbar-nav a:hover i {
+  color: var(--theme-color);
+}
+
+/* Banner Section */
+#banner {
+  background-image: url("../images/bg-1.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin-top: 0;
+}
+
+.banner--content {
+  max-width: 47rem;
+  text-align: center;
+  float: right;
+}
+
+.banner--content .banner-msg {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2.8px;
+}
+
+.banner--content .banner-title {
+  font-size: 5.8rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.banner-img {
+  width: 100%;
+}
+
+/* Featured products section */
+.product:hover .action-links {
+  visibility: visible;
+}
+
+.product-thumb {
+  position: relative;
+  margin-bottom: 3rem;
+  overflow: hidden;
+}
+
+.product-thumb img {
+  width: 100%;
+  min-height: 43.8rem;
+  max-height: 43.8rem;
+}
+.action-links {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  width: 100%;
+  text-align: center;
+}
+
+.action-links a i {
+  background: #fff;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 5rem;
+}
+.action-links a i:hover {
+  color: #fff;
+  background: var(--theme-color);
+  transition: 0.3s all linear;
+}
+
+.product-content {
+  text-align: center;
+}
+
+.product-content .product-name {
+  text-transform: capitalize;
+}
+
+.product-content .price {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/* Offer Section */
+#offer {
+  background-color: var(--bg-primary-section);
+}
+
+#offer .offer--content {
+  min-width: 47rem;
+  text-transform: uppercase;
+  float: right;
+  text-align: center;
+}
+
+#offer .offer--content h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+
+#offer .offer--content h4 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+}
+
+/* Features Section */
+#features {
+  padding: 5rem;
+}
+.feature-box {
+  border: 1px solid var(--grey-border);
+  padding: 2rem;
+  text-align: center;
+}
+
+.feature-box img {
+  margin-bottom: 1.5rem;
+}
+
+.feature-box h5 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.feature-box p {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+/* Trending Products */
+#trending-products {
+  padding-bottom: 4rem;
+}
