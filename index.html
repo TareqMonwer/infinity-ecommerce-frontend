@@ -54,15 +54,11 @@
             />
           </a>
           <!-- mobile menu toggler -->
-          <!-- <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button> -->
-          <ul class="navbar-nav d-flex flex-row">
+          <a href="" class="mobile-menu-toggler" id="menubar-toggler">
+            <i class="fas fa-bars"></i>
+          </a>
+          <!-- /mobile menu toggler -->
+          <ul class="navbar-nav menubar" id="menubar">
             <li class="nav-item">
               <a href="" class="nav-link">Home</a>
             </li>
@@ -883,5 +879,22 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+    <script type="text/javascript">
+      const toggler = document.querySelector("#menubar-toggler");
+      const menubar = document.querySelector("#menubar");
+
+      toggler.addEventListener("click", toggleMenu);
+
+      function toggleMenu(e) {
+        e.preventDefault();
+        const classes = [...menubar.classList];
+        if (!classes.includes("show")) {
+          menubar.classList.add("show");
+        } else {
+          menubar.classList.remove("show");
+        }
+      }
+    </script>
   </body>
 </html>

@@ -113,6 +113,15 @@ section {
   padding: 1.2rem 0;
 }
 
+.mobile-menu-toggler {
+  display: none;
+}
+
+.menubar {
+  display: flex;
+  flex-direction: row;
+}
+
 .navbar-nav .nav-item:not(:last-child) {
   margin-right: 2rem;
 }
@@ -423,4 +432,77 @@ a.date {
 
 .icon-box:hover i {
   color: var(--theme-color);
+}
+
+/* Laptop/tablet */
+@media (max-width: 800px) {
+  /* Banner */
+  .banner--content .banner-msg {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  .banner--content .banner-title {
+    font-size: 3rem;
+  }
+
+  /* Offer */
+  #offer .offer--content h1,
+  #offer .offer--content h4 {
+    margin-bottom: 1rem;
+  }
+
+  #offer .offer--content {
+    min-width: 100%;
+    float: none;
+    padding-top: 1.5rem;
+  }
+}
+
+/* Mobile Breakpoints */
+@media (max-width: 450px) {
+  #top-header {
+    display: none;
+  }
+  .show {
+    display: block !important;
+  }
+  .logo {
+    display: none;
+  }
+  .mobile-menu-toggler {
+    display: inline-block;
+  }
+  #menubar {
+    flex-direction: column;
+    order: 3;
+    display: none;
+  }
+  #menubar.show {
+    position: absolute;
+    top: 76px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    z-index: 1;
+    padding-left: 3rem;
+    transition: 0.5s all ease-in;
+  }
+  .nav-item {
+    padding: 0.5rem 0;
+  }
+  .nav-item .nav-link {
+    font-size: 1.4rem;
+    padding: 0.5rem 0;
+  }
+
+  /* Feature */
+  .feature-box,
+  .journal--box {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Footer */
+  #footer ul {
+    margin-bottom: 2rem;
+  }
 }
